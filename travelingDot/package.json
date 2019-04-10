@@ -1,0 +1,28 @@
+{
+  "name": "spiral",
+  "version": "1.0.0",
+  "description": "",
+  "main": "travelingDot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Unknown",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifycss": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "browser-sync": "^2.26.3",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-shell": "^0.7.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
