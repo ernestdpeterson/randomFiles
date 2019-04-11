@@ -1,0 +1,140 @@
+*{
+    background: lightblue;
+}
+.row{
+    width: 90vw;
+    margin: auto;
+}
+/* Circles */
+.circle{
+    float: left;
+    height: 300px;
+    width: 300px;
+    shape-outside: circle(25%);
+    shape-margin: 1rem;
+    clip-path: circle(25%);
+    background: linear-gradient(to top right, #cefd71, #ef6e4b);
+}
+.halfCircleTop{
+    float: left;
+    height: 300px;
+    width: 300px;
+    shape-outside: circle(25% at 50% 0); /* the first argument is the radius the first parameter is left to right the second is top to bottom with the center of the circle being the anchor */
+    shape-margin: 1rem;
+    clip-path: circle(25% at 50% 0);
+    background: linear-gradient(to top right, #cefd71, #ef6e4b);
+}
+.halfCircleBottom{
+    float: left;
+    height: 300px;
+    width: 300px;
+    shape-outside: circle(25% at 50% 100%);
+    shape-margin: 1rem;
+    clip-path: circle(25% at 50% 100%);
+    background: linear-gradient(to top right, #cefd71, #ef6e4b);
+}
+/* Ellipses*/
+.ellipse{
+    float: left;
+    shape-outside: ellipse();
+    clip-path: ellipse();
+    margin: 2rem;
+    width: 150px;
+    height: 300px;
+    background: linear-gradient(to top right, #fff, #ef6e4b);
+}
+.halfEllipseTop{
+    float: left;
+    shape-outside: ellipse(50% 50% at 50% 0); /* the first argument is the left radius the second argument is the right radius the first parameter is left to right the second is top to bottom with the center of the circle being the anchor */
+    clip-path: ellipse(50% 50% at 50% 0);
+    margin: 2rem;
+    width: 150px;
+    height: 300px;
+    background: linear-gradient(to top right, #fff, #ef6e4b);
+}
+.halfEllipseBottom{
+    float: left;
+    shape-outside: ellipse(50% 50% at 50% 100%);
+    clip-path: ellipse(50% 50% at 50% 100%);
+    margin: 2rem;
+    width: 150px;
+    height: 300px;
+    background: linear-gradient(to top right, #fff, #ef6e4b);
+}
+.halfEllipseLeft{
+    float: left;
+    shape-outside: ellipse(50% 50% at 0 50%);
+    clip-path: ellipse(50% 50% at 0 50%);
+    margin: 2rem;
+    width: 150px;
+    height: 300px;
+    background: linear-gradient(to top right, #fff, #ef6e4b);
+}
+.inset{
+    float: left;
+    shape-outside: inset(75px);
+    clip-path: inset(75px); /* Like padding or margin shorthand, the inset value will accept top right bottom left values in clockwise order (inset(25px 25px 25px 25px)), and only using a single value will make all four sides the same (inset(25px)). */
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#edb158, #1bdc95);
+}
+.insetBorder{
+    float: left;
+    shape-outside: inset(25px round 75px);
+    clip-path: inset(25px round 75px);
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#edb158, #1bdc95);
+}
+/* Chrome has some extensions you can use to create complex shapes, such as CSS Shapes Editor. */
+.polygon{
+    float: left;
+    shape-outside: polygon(0 0, 0 300px, 200px 300px);
+    clip-path: polygon(0 0, 0 300px, 200px 300px);
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to top right, #86F7CC, #67D7F5);
+}
+.polyLeft {
+  float: left;
+  shape-outside: polygon(0 0, 0 300px, 200px 300px);
+  clip-path: polygon(0 0, 0 300px, 200px 300px);
+  background: linear-gradient(to top right, #67D7F5, #86F7CC);
+  height: 300px;
+  width: 300px;
+}
+
+.polyRight {
+  float: right;
+  shape-outside: polygon(200px 300px, 300px 300px, 300px 0, 0 0);
+  clip-path: polygon(200px 300px, 300px 300px, 300px 0, 0 0);
+  background: linear-gradient(to bottom left, #67D7F5, #86F7CC);
+  height: 300px;
+  width: 300px;
+}
+.letter{
+    float: left;
+    font-size: 400px;
+    font-family: Georgia;
+    line-height: .8;
+    margin-top: 20px;
+    margin-right: 20px;
+    shape-outside: polygon(5px 14px, 233px 20px, 246px 133px, 189px 167px, 308px 304px, 0px 306px) content-box;
+    clip-path: polygon(5px 14px, 233px 20px, 246px 133px, 189px 167px, 308px 304px, 0px 306px);
+}
+/* you can also use a url of a semi-transparent image to define a shape, and the text will automatically flow around it. */
+/*<img src="./star.png" class="star">*/
+.star {
+  float: left;
+  height: 350px;
+  width: 350px;
+  shape-outside: url('./star.png')
+}
+.gradientSection{
+    float: left;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(to bottom right, #86F7CC, transparent);
+    shape-outside: linear-gradient(to bottom right, #86F7CC, transparent);
+    shape-image-threshold: .5;
+}
